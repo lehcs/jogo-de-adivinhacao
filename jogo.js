@@ -2,12 +2,17 @@
     const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
     let tentativas = 0;
     const maxTentativas = 10;
+    const valorNegativo = (valor) => valor <0;
 
 function Adivinhar() {
     while (tentativas < maxTentativas) {
-        const chute = document.getElementById("chute").value;
+        const chute = parseInt(document.getElementById("chute").value);
         tentativas++;
-       if (chute === numeroAleatorio) {
+        if (valorNegativo(chute)) {
+            document.getElementById("resultado").textContent = "Valor inválido! O número deve ser maior que 0 e menor que 100.";
+            return;
+        }
+        else if (chute === numeroAleatorio) {
             document.getElementById("resultado").textContent = "Parabéns! Você acertou o número em " + tentativas + " tentativas!";
         }
         else if (chute < numeroAleatorio){
@@ -21,6 +26,6 @@ function Adivinhar() {
             document.getElementById("dica").textContent = "";
             document.getElementById("tentativas").textContent = "Sem tentativas restantes.";
         }
-
+        break;
     }
 }
