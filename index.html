@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhação</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
@@ -16,11 +18,12 @@
         <p>Boa sorte!</p>
         <form>
             <input type="number" id="chute" placeholder="Digite seu palpite" required>
-            <button onclick="">Chutar</button>
+            <button type="button" onclick="Adivinhar()">Chutar</button>
         </form>
         <p id="tentativas"></p>
-        <p id="dicas"></p>
+        <p id="dica"></p>
         <p id="resultado"></p>
+        <button type="button" onclick="Reiniciar()">Reiniciar</button>
     </main>    
 </body>
 </html>
