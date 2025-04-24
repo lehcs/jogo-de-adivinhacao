@@ -29,3 +29,11 @@ function Adivinhar() {
         break;
     }
 }
+function Reiniciar() {
+    tentativas = 0;
+    numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    document.getElementById("resultado").textContent = "Tente adivinhar o número entre 1 e 100!";
+    document.getElementById("dica").textContent = "";
+    document.getElementById("tentativas").textContent = "Tentativas restantes: " + maxTentativas;
+    document.getElementById("chute").value = "";
+}
