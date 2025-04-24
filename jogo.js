@@ -14,6 +14,7 @@ function Adivinhar() {
         }
         else if (chute === numeroAleatorio) {
             document.getElementById("resultado").textContent = "Parabéns! Você acertou o número em " + tentativas + " tentativas!";
+            document.getElementById("dica").textContent = "";
         }
         else if (chute < numeroAleatorio){
             document.getElementById("dica").textContent = "O número é maior! Você ainda tem " + (maxTentativas - tentativas) + " tentativas.";
